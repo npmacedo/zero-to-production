@@ -1,5 +1,5 @@
+use secrecy::{ExposeSecret, Secret};
 use serde::Deserialize;
-use secrecy::{Secret, ExposeSecret};
 
 #[derive(Deserialize)]
 pub struct Settings {
@@ -23,7 +23,9 @@ impl DatabaseSettings {
         let host = &self.host;
         let port = self.port;
         let database_name = &self.database_name;
-        Secret::new(format!("postgres://{username}:{password}@{host}:{port}/{database_name}"))
+        Secret::new(format!(
+            "postgres://{username}:{password}@{host}:{port}/{database_name}"
+        ))
     }
 
     pub fn connection_string_without_db(&self) -> Secret<String> {
