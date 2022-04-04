@@ -28,7 +28,7 @@ impl TryFrom<FormData> for NewSubscriber {
     }
 }
 
-fn error_chain_fmt(
+pub fn error_chain_fmt(
     e: &impl std::error::Error,
     f: &mut std::fmt::Formatter<'_>,
 ) -> std::fmt::Result {
@@ -159,7 +159,7 @@ pub async fn send_confirmation_email(
 
     email_client
         .send_email(
-            new_subscriber.email,
+            &new_subscriber.email,
             "Welcome!",
             &format!(
                 "Welcome to our newsletter!<br/>\
