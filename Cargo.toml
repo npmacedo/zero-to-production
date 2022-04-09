@@ -30,7 +30,7 @@ serde-aux = "3.0.1"
 unicode-segmentation = "1.9.0"
 claim = "0.5.0"
 validator = "0.14.0"
-reqwest = {version="0.11.10", features=["json"]}
+reqwest = {version="0.11.10", features=["json","cookies"]}
 rand = { version = "0.8.5", features=["std_rng"] }
 thiserror = "1.0.30"
 anyhow = "1.0.56"
@@ -38,9 +38,7 @@ base64 = "0.13.0"
 argon2 = { version = "0.4.0", features = ["std"] }
 urlencoding = "2.1.0"
 htmlescape = "0.3.1"
-hmac = { version = "0.12.1", features = ["std"] }
-sha2 = "0.10.2"
-hex = "0.4.3"
+actix-web-flash-messages = { version = "0.3.2", features = ["cookies"] }
 
 [dependencies.sqlx]
 version = "0.5.7"
