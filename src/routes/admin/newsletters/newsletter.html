@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send a newsletter</title>
+</head>
+
+<body>
+    <h1>Send a newsletter</h1>
+    {msg_html}
+    <form action="/admin/newsletters" method="post">
+        <label for="title">
+            Title
+            <input type="text" name="title"/>
+        </label>
+    
+        <label for="content_text">
+            Content - Text
+            <textarea name="content_text"></textarea>
+        </label>
+    
+        <label for="content_html">
+            Content - HTML
+            <textarea name="content_html"></textarea>
+        </label>
+
+        <button type="submit">Send</button>
+    </form>
+    
+</body>
+
+</html>
